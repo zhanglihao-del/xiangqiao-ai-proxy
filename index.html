@@ -37,6 +37,7 @@
 </div>
 
 <script>
+// 👉 这里是你最新的 Vercel 接口地址，已经帮你写死了
 const PROXY_URL = "https://xiangqiao-ai-proxy-iabgot0u1-zhang-lihao-s-projects.vercel.app/api/chat";
 
 async function startCheck() {
@@ -82,6 +83,7 @@ XXX
         document.getElementById("correctResult").innerText = "【正确完整版】\n" + (parts[1] || "").trim();
 
     } catch (e) {
+        console.error(e); // 👉 加了这句，浏览器控制台能看到详细错误
         document.getElementById("scoreResult").innerText = "❌ 连接失败，请检查代理配置";
     }
 }
